@@ -1,0 +1,6 @@
+body {
+    background-image: url("../../img/Eat-less-salt-1200x630.jpg");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    z-index: 1;
+}

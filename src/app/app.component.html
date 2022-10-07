@@ -1,13 +1,16 @@
-<!-- <app-items></app-items>
-<router-outlet></router-outlet> -->
-
+<!-- <app-items></app-items> -->
+<!-- <router-outlet></router-outlet> -->
+<app-homecomponent></app-homecomponent>
+ 
 <div class="container-fluid">
-    <div class="row">
+  <div class="row">
+      <h1 class="text-center">Terméklista</h1>
+      <h3 class="text-center">A megadott adatok 100g mennyiségre vonatkoznak</h3>
       <div class="col-10 offset-1">
         <table class="table table-striped table-hover">
           <thead class="text-center">
             <tr>
-              <th>Termék neve</th>
+              <th style="width: 25%">Termék neve</th>
               <th>Energia (KJ)</th>
               <th>Energia (Kcal)</th>
               <th>Zsír</th>
@@ -21,7 +24,7 @@
           <tbody>
             <tr>
               <td>
-                <input [(ngModel)]="newItem.itemName" type="text" class="form-control">
+                <input [(ngModel)]="newItem.name" type="text" rows="4" class="form-control">
               </td>
               <td>
                 <input [(ngModel)]="newItem.energyKJ" type="number" class="form-control">
@@ -53,10 +56,11 @@
             </tr>
             <tr *ngFor="let item of items | async">
               <td>
-                <input [(ngModel)]="item.itemName" type="text" class="form-control">
+                <input [(ngModel)]="item.name" type="text" class="form-control">
+                <!-- <textarea name="itemName" cols="50" rows="2" [(ngModel)]="item.name"></textarea> -->
               </td>
               <td>
-                <input [(ngModel)]="item.energyKJ" ype="email" class="form-control">
+                <input [(ngModel)]="item.energyKJ" type="number" class="form-control">
               </td>
               <td>
                 <input [(ngModel)]="item.energyKcal" type="number" class="form-control">

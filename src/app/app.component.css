@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&display=swap');
+
 * {
     background-color: blanchedalmond;
+    font-family: 'Charis SIL', serif;
 }
 
 th {
     background-color: rgb(212, 197, 197);
+    font-size: 22px;
 }
-
-.btn .btn-primary {
-    padding-right: 50px;
+h1 {
+    padding-top: 25px;
+}
+h3 {
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
