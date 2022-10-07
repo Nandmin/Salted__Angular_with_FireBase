@@ -1,0 +1,11 @@
+* {
+    background-color: blanchedalmond;
+}
+
+th {
+    background-color: rgb(212, 197, 197);
+}
+
+.btn .btn-primary {
+    padding-right: 50px;
+}
