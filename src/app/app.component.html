@@ -1,8 +1,40 @@
+<nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light bg-light text-center">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/items">Items</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Articles</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Dropdown link
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
 <!-- <app-items></app-items> -->
-<!-- <router-outlet></router-outlet> -->
-<app-homecomponent></app-homecomponent>
+<router-outlet></router-outlet>
+<!-- <app-homecomponent></app-homecomponent> -->
+
+<!-- <app-items></app-items> -->
  
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row">
       <h1 class="text-center">Terméklista</h1>
       <h3 class="text-center">A megadott adatok 100g mennyiségre vonatkoznak</h3>
@@ -56,9 +88,9 @@
             </tr>
             <tr *ngFor="let item of items | async">
               <td>
-                <input [(ngModel)]="item.name" type="text" class="form-control">
+                <input [(ngModel)]="item.name" type="text" class="form-control"> -->
                 <!-- <textarea name="itemName" cols="50" rows="2" [(ngModel)]="item.name"></textarea> -->
-              </td>
+              <!-- </td>
               <td>
                 <input [(ngModel)]="item.energyKJ" type="number" class="form-control">
               </td>
@@ -94,7 +126,7 @@
         </table>
       </div>
     </div>
-  </div>
+  </div> -->
   
   <!-- DEBUG: -->
   <!-- {{items | async |json }} -->
