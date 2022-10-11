@@ -6,7 +6,7 @@
 }
 
 th {
-    background-color: rgb(212, 197, 197);
+    /* background-color: rgb(212, 197, 197); */
     font-size: 22px;
 }
 h1 {
@@ -16,3 +16,8 @@ h3 {
     padding-top: 20px;
     padding-bottom: 50px;
 }
+
+.navbar {
+    font-size: larger;
+}
+
