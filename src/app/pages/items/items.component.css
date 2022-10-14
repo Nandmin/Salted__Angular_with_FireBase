@@ -1,0 +1,9 @@
+input[type="text"], input[type="number"]
+{
+    background: transparent;
+    border: none;
+}
+
+* {
+    /* background-color: rgb(247, 243, 243); */
+}
