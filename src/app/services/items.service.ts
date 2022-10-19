@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
+import { Items } from '../model/items';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,8 @@ export class ItemsService {
     private fireStore: AngularFirestore
   ) {
     this.itemsCollection = this.fireStore.collection('lowsaltDB');
+    //kötegelt lekérdezés kettesével
+    //this.itemsCollection = this.fireStore.collection<Items>('lowsaltDB', ref => ref.where('name', '!=', '').limit(2));
     this.all = this.itemsCollection.valueChanges({
       idField: 'docID'
     });

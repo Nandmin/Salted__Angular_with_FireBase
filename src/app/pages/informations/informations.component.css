@@ -4,8 +4,8 @@ body {
     /* background-size: 100% 100%; */
     /* z-index: 1; */
     /* background-color: rgb(143, 206, 213) */
-    background: linear-gradient(0deg,rgba(106,71,71,0.94) 0%, #00daff 80%);
     /* background: linear-gradient(180deg,#0d47a1 0%, #00daff 80%); */
+    background: linear-gradient(180deg,#0d47a1 0%, #008dff 80%);
     /* background: radial-gradient(ellipse farthest-corner at bottom right, #ff0000 0%, #1d00ff 99%); */
 }
 

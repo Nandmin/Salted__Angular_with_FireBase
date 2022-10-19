@@ -7,7 +7,7 @@ import { ItemsService } from 'src/app/services/items.service';
   selector: 'app-items',
   templateUrl: './items.component.html',
   styleUrls: ['./items.component.css'],
-  encapsulation: ViewEncapsulation.None
+  // encapsulation: ViewEncapsulation.None
 })
 export class ItemsComponent implements OnInit {
 

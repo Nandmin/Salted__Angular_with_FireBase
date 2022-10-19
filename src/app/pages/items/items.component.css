@@ -7,3 +7,12 @@ input[type="text"], input[type="number"]
 * {
     /* background-color: rgb(247, 243, 243); */
 }
+
+.table {
+    border-radius: 20px;
+    /* box-shadow: 0 0 10px; */
+    box-shadow: 38px 26px 16px 0px rgba(0,0,0,0.47);
+    /* border: 2 solid black; */
+    /* border: 1px solid #0a0a0a; */
+    overflow: hidden;
+}

@@ -6,10 +6,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { ItemsComponent } from './pages/items/items.component';
 import { HomecomponentComponent } from './pages/homecomponent/homecomponent.component';
 import { AppComponent } from './app.component';
+import { InformationsComponent } from './pages/informations/informations.component';
 
 const routes: Routes = [
   { path: '', component: HomecomponentComponent },
   { path: 'items', component: ItemsComponent },
+  { path: 'informations', component: InformationsComponent },
   { path: '**', component: HomecomponentComponent }
 ];
 
