@@ -8,6 +8,9 @@ input[type="text"], input[type="number"]
     /* background-color: rgb(247, 243, 243); */
 }
 
+h1 {
+    padding-top: 50px;
+}
 .table {
     border-radius: 20px;
     /* box-shadow: 0 0 10px; */
@@ -15,4 +18,8 @@ input[type="text"], input[type="number"]
     /* border: 2 solid black; */
     /* border: 1px solid #0a0a0a; */
     overflow: hidden;
+}
+
+.row .accordion {
+    padding-top: 100px;
 }
