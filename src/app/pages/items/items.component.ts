@@ -14,6 +14,7 @@ export class ItemsComponent implements OnInit {
   title = 'salted-angular';
   items: Observable<any> = this.itemService.all;
   newItem: Items = new Items();
+  page: number | any;
 
   constructor(
     private itemService: ItemsService

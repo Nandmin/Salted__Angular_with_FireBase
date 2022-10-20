@@ -11,6 +11,8 @@ import { ItemsComponent } from './pages/items/items.component';
 import { environment } from '../environments/environment';
 import { HomecomponentComponent } from './pages/homecomponent/homecomponent.component';
 import { InformationsComponent } from './pages/informations/informations.component';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 
 @NgModule({
@@ -18,13 +20,15 @@ import { InformationsComponent } from './pages/informations/informations.compone
     AppComponent,
     ItemsComponent,
     HomecomponentComponent,
-    InformationsComponent
+    InformationsComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     FormsModule,
+    NgxPaginationModule,
     AppRoutingModule
   ],
   providers: [
