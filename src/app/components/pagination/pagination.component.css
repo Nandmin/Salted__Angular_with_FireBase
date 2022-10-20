@@ -1,6 +1,7 @@
 .ngx-pagination {
     margin-left: 0;
     margin-bottom: 1rem;
+    margin-top: 50px;
 }
 
 .ngx-pagination::before,
@@ -82,8 +83,8 @@
 
 .ngx-pagination .show-for-sr {
     position: absolute !important;
-    width: 1px;
-    height: 1px;
+    width: 5px;
+    height: 5px;
     overflow: hidden;
     clip: rect(0, 0, 0, 0);
 }

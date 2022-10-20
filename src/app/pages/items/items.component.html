@@ -101,7 +101,8 @@
             </thead>
             <tbody>
               <tr *ngFor="let item of items | async | paginate: {itemsPerPage: 10, currentPage: page, id: '1'}; let i = index">
-                <td  [(ngModel)]="item.id" type="text" class="form-control border border-0"></td>
+                <!-- <td  [(ngModel)]="" type="text" class="form-control border border-0"></td> -->
+                <td></td>
                 <td>
                   <input [(ngModel)]="item.name" type="text" class="form-control border border-0">
                   <!-- <textarea name="itemName" cols="50" rows="2" [(ngModel)]="item.name"></textarea> -->
@@ -148,7 +149,7 @@
             </tbody>
           </table>
           <app-pagination (pageChange)="page = $event" id="1"
-              [maxSize] = "5"
+              [maxSize] = "10"
               [directionLinks]="true"
               [autoHide]="true">
           </app-pagination>

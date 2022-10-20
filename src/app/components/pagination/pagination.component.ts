@@ -17,7 +17,7 @@ export class PaginationComponent implements OnInit {
 
 
   @Input() id: string | any;
-    @Input() maxSize: number = 5;
+    @Input() maxSize: number = 10;
     @Input()
 
     get directionLinks(): boolean {
