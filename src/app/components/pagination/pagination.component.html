@@ -1,42 +1,61 @@
 <pagination-template #p="paginationApi" [id]="id" [maxSize]="maxSize" (pageChange)="pageChange.emit($event)">
 
 
-	<ul class="ngx-pagination text-center" role="navigation" [attr.aria-label]="screenReaderPaginationLabel" *ngIf="!(autoHide && p.pages.length <= 1)">
-
-        <li class="pagination-previous" [class.disabled]="p.isFirstPage()" *ngIf="directionLinks">
-			<a *ngIf="!p.isFirstPage()" (click)="p.previous()"> </a>
-		</li>
-		<li [class.current]="p.getCurrent() === page.value" *ngFor="let page of p.pages">
-
-			<div *ngIf="p.getCurrent() === page.value">
-				<span class="show-for-sr">{{ screenReaderCurrentLabel }} </span>
-				<!-- <span>{{ 5*(page.label-1)+1 }} - {{5*p.getCurrent()}}</span> -->
-				<!-- <span>{{ p.getTotalItems() - ((p.getCurrent() * 2) + 10) }}</span> -->
-                <!-- <span>{{ p.getCurrent() * maxSize - maxSize + 1  }} </span> -->
-                <span>{{ maxSize * (p.getCurrent() - 1) + 1  }} </span>
-			</div>
-		</li>
-
-		<li class="total-pages" *ngIf="directionLinks">
-			<span *ngIf="!p.isLastPage()">
+    <div class="row d-flex">
+        <div class="col text-center mt-5" style="font-size: 20px; font-weight: bold; padding-top: 10px;">
+                <span class="mx-auto mt-2">
+                    Összes elem száma: {{  p.getTotalItems() }}
+                    
+                </span>
+            
+        </div>
+        <div class="col sec d-flex justify-content-center">
+                <ul class="ngx-pagination text-center" role="navigation" [attr.aria-label]="screenReaderPaginationLabel" *ngIf="!(autoHide && p.pages.length <= 1)">
+                <li class="pagination-previous" [class.disabled]="p.isFirstPage()" *ngIf="directionLinks">
+                    <a *ngIf="!p.isFirstPage()" (click)="p.previous()"> </a>
+                </li>
+                <li [class.current]="p.getCurrent() === page.value" *ngFor="let page of p.pages">
+        
+                    <div *ngIf="p.getCurrent() === page.value">
+                        <span class="show-for-sr">{{ screenReaderCurrentLabel }} </span>
+                        <!-- <span>{{ 5*(page.label-1)+1 }} - {{5*p.getCurrent()}}</span> -->
+                        <!-- <span>{{ p.getTotalItems() - ((p.getCurrent() * 2) + 10) }}</span> -->
+                        <!-- <span>{{ p.getCurrent() * maxSize - maxSize + 1  }} </span> -->
+                        <!-- <span>{{ maxSize * (p.getCurrent() - 1) + 1  }} </span> -->
+                        <span>{{ p.getCurrent() }}</span>
+                    </div>
+                </li>
+        
+                <li class="total-pages" *ngIf="directionLinks">
+                    <span *ngIf="!p.isLastPage()">
+                                <!-- of {{totalListCount * p.pages.length }} -->
+                                <!-- &nbsp;&nbsp;&nbsp;of&nbsp;&nbsp;&nbsp;   {{ (p.getCurrent() * maxSize) }} -->
+                                &nbsp;&nbsp;&nbsp;of&nbsp;&nbsp;&nbsp;   {{ p.pages.length }} 
+                    </span>
+                    <span *ngIf="p.isLastPage()">
                         <!-- of {{totalListCount * p.pages.length }} -->
-                       of {{ (p.getCurrent() * maxSize) }}
-			</span>
-            <span *ngIf="p.isLastPage()">
-                <!-- of {{totalListCount * p.pages.length }} -->
-               of {{ p.getTotalItems() }}
-             </span>
-		</li>
-		
-		<li class="pagination-next" [class.disabled]="p.isLastPage()" *ngIf="directionLinks">
-			<a *ngIf="!p.isLastPage()" (click)="p.next()" [attr.aria-label]="nextLabel + ' ' + screenReaderPageLabel">
-				<span class="show-for-sr">{{ screenReaderPageLabel }}</span>
-			</a>
-			<span *ngIf="p.isLastPage()">
-                <span class="show-for-sr">{{ screenReaderPageLabel }}</span>
-			</span>
-		</li>
-	</ul>
+                        <!-- &nbsp;&nbsp;&nbsp;of&nbsp;&nbsp;&nbsp; {{ p.getTotalItems() }} -->
+                        &nbsp;&nbsp;&nbsp;of&nbsp;&nbsp;&nbsp; {{ p.pages.length }} 
+                     </span>
+                </li>
+                
+                <li class="pagination-next" [class.disabled]="p.isLastPage()" *ngIf="directionLinks">
+                    <a *ngIf="!p.isLastPage()" (click)="p.next()" [attr.aria-label]="nextLabel + ' ' + screenReaderPageLabel">
+                        <span class="show-for-sr">{{ screenReaderPageLabel }}</span>
+                    </a>
+                    <span *ngIf="p.isLastPage()">
+                        <span class="show-for-sr">{{ screenReaderPageLabel }}</span>
+                    </span>
+                </li>
+            </ul>   
+            </div>
+            
+            
+            <div class="col"></div>
+        </div>
+         
+
+        
 </pagination-template>
 
 <!-- 
